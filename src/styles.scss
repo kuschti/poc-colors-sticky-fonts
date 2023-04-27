@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css?family=Bree+Serif|Poppins|Source+Sans+Pro|Montserrat:400,900&display=swap");
+:root {
+  --color-sumach-bg: #FF548C;
+  --color-white-bg: #FFF;
+  --color-basilikum-bg: #00E09D;
+  --color-pepper-bg: #F7F7F4;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", "Poppins", sans-serif;
+}
+
+/* Setting fade transition and default settings */
+body {
+  color: #00327D;
+  text-align: center;
+  font-size: 120%;
+  line-height: 1.618;
+  background-color: #fff;
+  transition: background-color 1s ease;
+}
+
+h1, h2 {
+  font-size: 3em;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  display: block;
+  width: 100%;
+}
+
+p {
+  max-width: 30em;
+  margin: 0 auto 30px;
+}
+
+.intro,
+.outro {
+  text-align: center;
+  min-height: 80vh;
+}
+
+.intro {
+  background-color: #00327D;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel-group {
+  --color-sumach-bg: #FF548C;
+  --color-sumach-color: #FFF;
+  --color-white-bg: #FFF;
+  --color-white-color: #00327D;
+  --color-basilikum-bg: #00E09D;
+  --color-basilikum-color: #FFF;
+  --color-pepper-bg: #F7F7F4;
+  --color-pepper-color: #00327D;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: color, background-color 1s;
+
+  &:has(.panel:first-child) {
+    background-color: var(--color-sumach-bg);
+  }
+}
+
+/* panel styles */
+.panel {
+  /* min height incase content is higher than window height */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-family: sans-serif;
+  padding-right: calc(10vw + 400px);
+}
+
+.teaser {
+  position: absolute;
+  top: calc(50vh - 300px) ;
+  right: 5vw;
+  background-color: white;
+  border-radius: 10px;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #00327D;
+}
